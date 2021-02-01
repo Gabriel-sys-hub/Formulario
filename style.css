@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #C850C0, #FFCC70);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.mainBox {
+    background-color: white;
+    max-width: 350px;
+    min-height: 40vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-weight: 600;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+h1::before {
+    content: '                      ';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    left: 105px;
+    bottom: 3px;
+    left: 1;
+    border-radius: 8px;
+    background: linear-gradient(45deg,  #C850C0, #FFCC70);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,  #C850C0, #FFCC70);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #C850C0, #FFCC70);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,  #C850C0, #FFCC70); 
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer .social-field {   
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.footer .social-fields a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field-twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background:linear-gradient(to right,  #C850C0, #FFCC70); 
+}
+
+.footer .social-field-facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right,  #C850C0, #FFCC70); 
+}
+
+nav {
+    width: 450px;
+    height: 450px;
+}
+
+.botaoRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#check {
+    display: none;
+}
+
+#central {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 150px 150px;
+    z-index: 1;
+}
+
+#central img {
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    border-radius: 50%;
+}
+
+.link {
+    position: absolute;
+    margin: 195px 195px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.4s ease-out;
+}
+
+#check:checked ~ a #link_01 {
+    transform: translateY(-195px);
+}
+
+#check:checked ~ a #link_02 {
+    transform: translateX(190px);
+}
+
+#check:checked ~ a #link_03 {
+    transform: translateY(195px);
+}
+
+#check:checked ~ a #link_04 {
+    transform: translateX(-195px);
+}
+
+#check:checked ~ #central img{
+    transform: rotate(45deg);
+}
+
